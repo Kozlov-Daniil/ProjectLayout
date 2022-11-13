@@ -5,12 +5,17 @@
 .main{
     background-color: #0B1D26;
     color: #fff;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 100px;
 }
 
 .preview{
     position: relative;
     height: 100vh;
     width: 100vw;
+    transform-style: preserve-3d;
 }
 
 .previewLayer{
@@ -25,6 +30,7 @@
     background-image: url(../images/background.png);
     background-size: cover;
     z-index: 1;
+    transform: translateZ(-50px) scale(2);
 }
 
 .header{
@@ -92,7 +98,9 @@
 }
 
 .content{
-    padding: 100px 80px;
+    padding: 100px 88px;
+    position: relative;
+    background-color: #0B1D26;
 }
 
 .section{
@@ -196,4 +204,11 @@
 
 .bottomNavItem:not(:last-child){
     padding-bottom: 16px;
+}
+
+.gradient{
+    height: 200px;
+    width: 100%;
+    background-image: linear-gradient(transparent, 
+        rgba(11, 29, 38, 0.2) 15%, rgba(11, 29, 38, 0.4) 30%, rgba(11, 29, 38, 0.6) 40%, rgba(11, 29, 38, 0.7) 50%, rgba(11, 29, 38, 0.8) 70%, rgba(11, 29, 38, 0.9) 90%);
 }
