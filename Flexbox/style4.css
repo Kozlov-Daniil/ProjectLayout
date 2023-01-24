@@ -136,4 +136,46 @@ button:hover{
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.gallery{
+    padding: .5vw;
+    font-size: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-flow: row wrap;
+}
+
+.gallery div{
+    flex: auto;
+    width: 237px;
+    margin: .5vw;
+}
+
+.gallery img{
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+}
+
+@Media screen and (max-width: 550px) {
+    .gallery div {
+        margin: 0;
+    }
+    .gallery{
+        padding: 0;
+    }
+}
+
+.gallery:hover img{
+    opacity: 0.3;
+    transition: 0.8s opacity;
+}
+
+.gallery:hover img:hover{
+    opacity: 1;
+    transition: 0.8s opacity;
+}
+
+
+
 
